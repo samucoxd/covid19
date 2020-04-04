@@ -18,10 +18,10 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <form id="contactForm" name="sentMessage" novalidate="novalidate" >
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>Name</label><input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." />
+                                    <label>Nombre</label><input class="form-control" id="name" type="text" placeholder="Nombre" required="required" data-validation-required-message=Por Favor ingrese de Nombre." />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
