@@ -8,6 +8,9 @@ $i = 'true'
 <div class="container">
     <div class="row">
         <div class="col-12">
+            <a href="{{ route('preguntas.create') }}" class="btn btn-success btn-block">CREAR NUEVO REGISTRO</a>
+        </div>
+        <div class="col-12">
             <div class="accordion" id="accordionExample">
                 @foreach ($Preguntas as $Pregunta)
 
