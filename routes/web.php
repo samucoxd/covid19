@@ -25,6 +25,8 @@ Route::get('contacto.index', 'ContactoController@index')->name('contacto');
 Route::get('covid.conocelo', 'CovidController@conocelo')->name('conocelo');
 Route::get('covid.preparate', 'CovidController@preparate')->name('preparate');
 Route::get('covid.actua', 'CovidController@actua')->name('actua');
+Route::resource('preguntas', 'PreguntasController')->only('index','create','store');
+//Route::get('preguntas.create', 'PreguntasController@create')->name('create');
 
 
 Route::get('/api', function() {
