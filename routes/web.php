@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use GuzzleHttp\Client;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,24 +20,11 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('nosotros.index', 'NosotrosController@index')->name('nosotros');
-Route::get('estadistica.index', 'EstadisticaController@index')->name('estadistica');
+Route::resource('estadistica', 'EstadisticaController');
 Route::get('contacto.index', 'ContactoController@index')->name('contacto');
 Route::get('covid.conocelo', 'CovidController@conocelo')->name('conocelo');
 Route::get('covid.preparate', 'CovidController@preparate')->name('preparate');
 Route::get('covid.actua', 'CovidController@actua')->name('actua');
 Route::resource('preguntas', 'PreguntasController')->only('index','create','store');
-//Route::get('preguntas.create', 'PreguntasController@create')->name('create');
 
-
-Route::get('/api', function() {
-
-  $client = new Client([
-    // Base URI is used with relative requests
-    'base_uri' => 'https://api.statworx.com/covid',
-     // You can set any number of default request options.
-     'timeout'  => 2.0,
-
-]);
-dd($client);
-});
 
