@@ -31,7 +31,17 @@
                         </div>
                     </div>
                 </li>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ route('estadistica.index') }}">Estadisticas</a></li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Estadisticas
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="{{ route('estadistica.index') }}">Nacional</a>
+                            <a class="dropdown-item" href="{{ route('mundial') }}">Internacional</a>
+                        </div>
+                    </div>
+                </li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ route('preguntas.index') }}">Preguntas</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ route('nosotros') }}">Nosotros</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ route('contacto') }}">Cotacto</a></li>
@@ -46,18 +56,25 @@
                 <div class="row">
                     <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">2215 John Daniel Drive<br />Clark, MO 65243</p>
+                        <h4 class="text-uppercase mb-4">Numeros de Emergencia</h4>
+                        <button class="btn btn-danger">800-10-1104</button>
+                        <button class="btn btn-danger">800-10-1106</button>
+                        <p class="lead mb-0">Ante Cualquier Consulte llame<br />a los Numeros de Emergencia</p>
                     </div>
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <h4 class="text-uppercase mb-4">Redes Sociales</h4>
                         <a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-dribbble"></i></a>
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                        <p class="lead mb-0">Freelance is a free to use, MIT licensed Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                        <h4 class="text-uppercase mb-4">Visita.</h4>
+                        <a href="http://www.gmsantacruz.gob.bo/" class="btn btn-success btn-round" style="margin-right: 5px;margin-bottom: 5px;">
+						    Gobernacion.
+                        </a>
+                        <a href="https://www.minsalud.gob.bo/" class="btn btn-success btn-round" style="margin-right: 5px;margin-bottom: 5px;">
+						    Ministerio de Salud
+					    </a>
                     </div>
                 </div>
             </div>

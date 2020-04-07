@@ -4,7 +4,7 @@
 
 
 <!-- Contact Section-->
-<section class="page-section" id="contact">
+<section class="page-section" id="contact" style="margin-top: 50px">
             <div class="container">
                 <!-- Contact Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mt-4">Contactanos</h2>
