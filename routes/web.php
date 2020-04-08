@@ -21,6 +21,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('nosotros.index', 'NosotrosController@index')->name('nosotros');
 Route::resource('estadistica', 'EstadisticaController');
+Route::resource('test', 'TestController');
 Route::get('estadistica.mundial', 'EstadisticaController@mundial')->name('mundial');
 Route::get('contacto.index', 'ContactoController@index')->name('contacto');
 Route::get('covid.conocelo', 'CovidController@conocelo')->name('conocelo');

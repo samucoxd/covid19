@@ -6,7 +6,8 @@
 <section class="page-section portfolio" id="portfolio" style="margin-top: 50px">
             <div class="container">
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mt-4">Estadistica - {{ $Estadisticas->lastUpdate }}</h2>
+                @foreach ($Estadisticas->latest_stat_by_country as $Estadistica)
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mt-4">Estadistica - {{ $Estadistica->record_date }}</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -20,7 +21,7 @@
                         <div class="card">
                             <img class="img-fluid" src="{!! asset('assets/covid/confirmed.png') !!}" alt="" />
                             <div class="card-body">
-                                <h5 class="card-title">{{ $Estadisticas->confirmed->value }} - Confirmados</h5>
+                                <h5 class="card-title">{{ $Estadistica->total_cases }} - Confirmados</h5>
                             </div>
                         </div>
                     </div>
@@ -29,7 +30,7 @@
                         <div class="card">
                             <img class="img-fluid" src="{!! asset('assets/covid/recovered.png') !!}" alt="" />
                             <div class="card-body">
-                                <h5 class="card-title">{{ $Estadisticas->recovered->value }} - Recuperados</h5>
+                                <h5 class="card-title">{{ $Estadistica->total_recovered }} - Recuperados</h5>
                             </div>
                         </div>
                     </div>
@@ -38,11 +39,12 @@
                         <div class="card">
                             <img class="img-fluid" src="{!! asset('assets/covid/deaths.png') !!}" alt="" />
                             <div class="card-body">
-                                <h5 class="card-title">{{ $Estadisticas->deaths->value }} - Decesos</h5>
+                                <h5 class="card-title">{{ $Estadistica->total_deaths }} - Decesos</h5>
                             </div>
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
         </section>
         

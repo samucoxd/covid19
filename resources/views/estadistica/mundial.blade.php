@@ -9,33 +9,36 @@
 
             <table id="myTable" class="table">
                 <thead>
-                    <th>Provincia</th>
                     <th>Pais</th>
                     <th>Confirmados</th>
                     <th>Recuperados</th>
                     <th>Decesos</th>
                     <th>Casos</th>
-                    <th>Fecha</th>
+                    <th>Nuevos Decesos</th>
+                    <th>Nuevos Casos</th>
+                    <th>Estado Critico</th>
                 </thead>
-                    @foreach ($Paises as $Pais)
+                    @foreach ($Paises->countries_stat as $Pais)
                     <tr>
-                        <td>{{ $Pais->provinceState }}</td>
-                        <td>{{ $Pais->countryRegion }}</td>
-                        <td>{{ $Pais->confirmed }}</td>
-                        <td>{{ $Pais->recovered }}</td>
+                        <td>{{ $Pais->country_name }}</td>
+                        <td>{{ $Pais->cases }}</td>
+                        <td>{{ $Pais->total_recovered }}</td>
                         <td>{{ $Pais->deaths }}</td>
-                        <td>{{ $Pais->active }}</td>
-                        <td>{{ $Pais->lastUpdate }}</td>
+                        <td>{{ $Pais->active_cases }}</td>
+                        <td>{{ $Pais->new_deaths }}</td>
+                        <td>{{ $Pais->new_cases }}</td>
+                        <td>{{ $Pais->serious_critical }}</td>
                     </tr>
                     @endforeach
                 <tfoot>
-                    <th>Provincia</th>
                     <th>Pais</th>
                     <th>Confirmados</th>
                     <th>Recuperados</th>
                     <th>Decesos</th>
                     <th>Casos</th>
-                    <th>Fecha</th>
+                    <th>Nuevos Decesos</th>
+                    <th>Nuevos Casos</th>
+                    <th>Estado Critico</th>
                 </tfoot>
             </table>
         </div>
@@ -54,7 +57,7 @@
     
       // Loop through all table rows, and hide those who don't match the search query
       for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[1];
+        td = tr[i].getElementsByTagName("td")[0];
         if (td) {
           txtValue = td.textContent || td.innerText;
           if (txtValue.toUpperCase().indexOf(filter) > -1) {
