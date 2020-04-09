@@ -15,14 +15,15 @@ class CreateTestsTable extends Migration
     {
         Schema::create('tests', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('tos')->nullable($value = true);
-            $table->string('respirar')->nullable($value = true);
-            $table->string('salud')->nullable($value = true);
-            $table->string('edad')->nullable($value = true);
-            $table->string('ci')->nullable($value = true);
-            $table->string('correo')->nullable($value = true);
-            $table->string('telefono')->nullable($value = true);
-            $table->string('direccion')->nullable($value = true);
+            $table->string('temperatura')->nullable($value = true)->default('NULL');
+            $table->string('tos')->nullable($value = true)->default('NULL');
+            $table->string('respirar')->nullable($value = true)->default('NULL');
+            $table->string('salud')->nullable($value = true)->default('NULL');
+            $table->string('edad')->nullable($value = true)->default('NULL');
+            $table->string('ci')->nullable($value = true)->default('NULL');
+            $table->string('correo')->nullable($value = true)->default('NULL');
+            $table->string('telefono')->nullable($value = true)->default('NULL');
+            $table->string('direccion')->nullable($value = true)->default('NULL');
             $table->timestamps();
 
             $table->foreignId('user_id')->constrained();

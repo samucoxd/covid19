@@ -18,7 +18,10 @@ class CreatePreguntasTable extends Migration
             $table->string('titulo');
             $table->text('contenido');
             $table->string('autor');
+            $table->string('link');
             $table->timestamps();
+
+            $table->foreignId('user_id')->constrained();
         });
     }
 

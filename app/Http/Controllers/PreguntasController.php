@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Preguntas;
-
+use Illuminate\Support\Facades\Auth;
 
 class PreguntasController extends Controller
 {
@@ -45,8 +45,10 @@ class PreguntasController extends Controller
         $Preguntas->titulo        = $request->titulo;
         $Preguntas->contenido     = $request->contenido;
         $Preguntas->autor         = $request->autor;
+        $Preguntas->link          = $request->link;
+        $Preguntas->user_id       = Auth::id();
         $Preguntas->save();
-        return redirect()->route('preguntas.index')->with('mensaje', 'Registro Guardado Correctamente');
+        return redirect()->route('preguntas.index')->with('mensaje', 'Su Registro sera Evaluado por un Moderador');
     }
 
 }

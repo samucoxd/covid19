@@ -27,13 +27,13 @@
                 </div>
                 <div class="form-group">
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch1" name="tos" value="si">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1" name="tos" value="SI">
                         <label class="custom-control-label" for="customSwitch1">¿Tenes Tos o Dolor de Garganta?</label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch2" name="respirar" value="si">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch2" name="respirar" value="SI">
                         <label class="custom-control-label" for="customSwitch2">¿Tenes Dificultad Respiratoria o Falta de Aire?</label>
                     </div>
                 </div>
@@ -41,14 +41,14 @@
                     <label>Situacion de Salud</label>
                     <select class="custom-select custom-select-lg mb-3" name="salud">
                         <option selected>Seleccione una Opcion</option>
-                        <option value="mayor">Mayor de 60 Años</option>
-                        <option value="embarazada">Estoy Embarazada</option>
-                        <option value="cancer">Cancer</option>
-                        <option value="diabetes">Diabetes</option>
-                        <option value="epatica">Enfermedad Epatica</option>
-                        <option value="renal">Enfermedad Renal Cronica</option>
-                        <option value="respiratoria">Enfermedad Respiratoria</option>
-                        <option value="cardiologica">Enfermedad Cardiologica</option>
+                        <option value="Mayor de 60 Años">Mayor de 60 Años</option>
+                        <option value="Estoy Embarazada">Estoy Embarazada</option>
+                        <option value="Tengo Cancer">Cancer</option>
+                        <option value="Tengo Diabetes">Diabetes</option>
+                        <option value="Enfermedad Epatica">Enfermedad Epatica</option>
+                        <option value="Enfermedad Renal Cronica">Enfermedad Renal Cronica</option>
+                        <option value="Enfermedad Respiratoria">Enfermedad Respiratoria</option>
+                        <option value="Enfermedad Cardiologica">Enfermedad Cardiologica</option>
                     </select>
                 </div>
                 <div class="form-group">

@@ -6,6 +6,18 @@ $i = 'true'
 @endphp
 <section style="margin-top: 150px; margin-bottom: 20px;">
 <div class="container">
+@if ( session('mensaje') )
+
+<div class="container">
+    <div class="alert alert-success alert-dissmissible fade show" role="alert">
+        {{ session('mensaje') }}
+        <button class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+
+@endif
     <div class="row">
         <div class="col-12">
             <a href="{{ route('preguntas.create') }}" class="btn btn-success btn-block">CREAR NUEVO REGISTRO</a>
@@ -28,7 +40,10 @@ $i = 'true'
                             <div class="card-body">
                             {{ $Pregunta->contenido }}
                             </div>
-                            <footer class="blockquote-footer">Autor: {{ $Pregunta->autor }} <cite title="Source Title">- Fecha: {{ $Pregunta->updated_at }}</cite></footer>
+                            <footer class="blockquote-footer">Autor: {{ $Pregunta->autor }} 
+                                <cite title="Source Title">- Fecha: {{ $Pregunta->updated_at }}</cite>
+                                Link: <code><a href=" {{ $Pregunta->link }}" target="_blank">Referencia</a></code>
+                            </footer>
                         </div>
                     @else
                     <div class="card">
@@ -43,7 +58,10 @@ $i = 'true'
                             <div class="card-body">
                             {{ $Pregunta->contenido }}
                             </div>
-                            <footer class="blockquote-footer">Autor: {{ $Pregunta->autor }} <cite title="Source Title">- Fecha: {{ $Pregunta->updated_at }}</cite></footer>
+                            <footer class="blockquote-footer">Autor: {{ $Pregunta->autor }} 
+                                <cite title="Source Title">- Fecha: {{ $Pregunta->updated_at }} </cite>
+                                Link: <code><a href=" {{ $Pregunta->link }}"  target="_blank">Referencia</a></code>
+                            </footer>
                         </div>
                     @endif
                     

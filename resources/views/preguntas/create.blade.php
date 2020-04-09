@@ -18,8 +18,8 @@
                         <textarea name="contenido"  cols="30" rows="10" class="form-control" required></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Autor</label>
-                        <input type="text" name="autor" class="form-control" placeholder="Ingresa el Autor" required>
+                        <label for="exampleInputPassword1">Link de Refererncia</label>
+                        <input type="text" name="link" class="form-control" placeholder="Ingrese el link" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

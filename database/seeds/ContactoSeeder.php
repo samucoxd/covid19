@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ContactoSeeder extends Seeder
 {
@@ -16,6 +17,7 @@ class ContactoSeeder extends Seeder
             'correo' => 'diego1946@gmail.com',
             'telefono' => 76362384,
             'mensaje' => 'esta es una prueba para el proyecto del covid19',
+            'user_id' => 1,
         ]);
     }
 }

@@ -20,6 +20,8 @@ class CreateContactosTable extends Migration
             $table->integer('telefono');
             $table->text('mensaje');
             $table->timestamps();
+
+            $table->foreignId('user_id')->constrained();
         });
     }
 
